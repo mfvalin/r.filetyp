@@ -5,6 +5,6 @@ profileDirPath=${packageHome}/etc/profile.d
 packageName=${packageHome##*/}
 profilePath=${profileDirPath}/${packageName}.sh
 mkdir -p ${profileDirPath}
-echo "MAGIC_EXTRA_FILE=${packageHome}" >> ${profilePath}
+echo "export MAGIC_EXTRA_FILE=${packageHome}" >> ${profilePath}
 cd ${packageHome}/src
 make dist
