@@ -54,7 +54,7 @@
       if (ier .gt. -1) then
         write(6,77) 'File type is ',msgs(ier)
       else if (ier .eq. -1) then
-         call system('file '//trim(val(1))//' -m $MAGIC_EXTRA_FILE/magic.extra:/usr/share/misc/magic '//trim(val(2)))
+         call system('file '//trim(val(1))//' -m $MAGIC_EXTRA_FILE/magic.extra:${SYSTEM_MAGIC_FILE:-/usr/share/misc/magic} '//trim(val(2)))
 !        call system('file '//val(1))
       else if (ier .eq. -2) then
          write(6,99)
