@@ -34,5 +34,5 @@ dist: $(EXECUTABLE) magic.extra
 	mkdir -p ../bin
 	mkdir -p ../share
 	cp $(EXECUTABLE) ../bin
-	EXECUTABLE=${EXECUTABLE} ; ln -sf $(EXECUTABLE) ../bin/$${EXECUTABLE%_*}
+	EXECUTABLE=${EXECUTABLE} ; ln -sf $(EXECUTABLE) ../bin/$${EXECUTABLE%%_*}
 	cp magic.extra ../share
